@@ -1,0 +1,46 @@
+<!-- news/templates/news/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Trending News</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/news/sports/">Sports</a></li>
+                <li class="nav-item"><a class="nav-link" href="/news/business/">Business</a></li>
+                <li class="nav-item"><a class="nav-link" href="/news/finance/">Finance</a></li>
+                <li class="nav-item"><a class="nav-link" href="/news/politics/">Politics</a></li>
+                <li class="nav-item"><a class="nav-link" href="/news/celebrity/">Celebrity</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Trending News</h1>
+        <div class="row">
+            {% for article in trending_articles %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="{{ article.urlToImage }}" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ article.title }}</h5>
+                        <p class="card-text">{{ article.description }}</p>
+                        <a href="{{ article.url }}" class="btn btn-primary" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
