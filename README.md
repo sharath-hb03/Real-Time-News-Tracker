@@ -1,1 +1,1 @@
-# Real-Time-News-Tracker
+A Django-based web application that fetches the latest trending news over the past 24 hours, categorized into subtopics like business, finance, sports, politics, and celebrity. The application uses NewsAPI to get real-time news updates
