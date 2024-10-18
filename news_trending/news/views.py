@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from datetime import timedelta
 
-API_KEY = 'c9851b6e65cc40829e09f532b6c972e4'  # Replace with your actual API key
+API_KEY = ''  # Replace with your actual API key
 
 def fetch_trending_news(request):
     # Get the current time and calculate the time 24 hours ago
